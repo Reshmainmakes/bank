@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <style>
+        .flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+button.margin-right {
+  margin-right: 20px;
+}
+    </style>
+<title>Center align button</title>
+
+</head>
+<body>
+
+
+<div class="flex-parent jc-center">
+    <form action="{% url 'form' %}">
+    {% csrf_token %}
+  <button type="submit" class="green margin-right">Confirm</button>
+    </form>
+    <form action="{% url 'login' %}">
+  <button type="submit" class="magenta">Cancel</button>
+        </form>
+</div>
+
+
+
+</body>
+</html>
